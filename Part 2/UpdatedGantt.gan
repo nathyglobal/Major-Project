@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Untitled Gantt Project" company="" webLink="http://" view-date="2014-09-01" view-index="0" gantt-divider-location="354" resource-divider-location="300" version="2.0" locale="en_US">
+    <description/>
+    <view zooming-state="default:9" id="gantt-chart">
+        <field id="tpd3" name="Name" width="57" order="0"/>
+        <field id="tpd4" name="Begin date" width="21" order="1"/>
+        <field id="tpd5" name="End date" width="21" order="2"/>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="50" order="0"/>
+        <field id="1" name="Default role" width="50" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <calendar id="1" name="default">
+                <default-week sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+                <only-show-weekends value="false"/>
+                <overriden-day-types/>
+                <days/>
+            </calendar>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" name="Defining and Understanding" color="#ff3333" meeting="false" start="2014-11-06" duration="23" complete="0" expand="false">
+            <task id="6" name="Identifying the Problem" color="#ff3333" meeting="false" start="2014-11-14" duration="5" complete="0" expand="true"/>
+            <task id="15" name="Development Approach" color="#ff3333" meeting="false" start="2014-12-04" duration="1" complete="0" expand="true"/>
+            <task id="18" name="Social and Ethical" color="#ff3333" meeting="false" start="2014-12-08" duration="1" complete="0" expand="true"/>
+            <task id="74" name="Quality Assurance" color="#ff0000" meeting="false" start="2014-11-20" duration="6" complete="0" expand="true"/>
+            <task id="21" name="User Feedback" color="#ff3333" meeting="false" start="2014-11-10" duration="19" complete="0" expand="true"/>
+            <task id="29" name="Project Website" color="#ff3300" meeting="false" start="2014-11-24" duration="4" complete="0" expand="true"/>
+            <task id="32" name="IPO Diagram" color="#ff3300" meeting="false" start="2014-12-04" duration="1" complete="0" expand="true"/>
+            <task id="34" name="Context Diagram" color="#ff3300" meeting="false" start="2014-12-04" duration="1" complete="0" expand="true"/>
+            <task id="40" name="DFD" color="#ff3300" meeting="false" start="2014-11-06" duration="6" complete="0" expand="true"/>
+            <task id="42" name="Storyboards" color="#ff3300" meeting="false" start="2014-11-13" duration="1" complete="0" expand="true"/>
+            <task id="44" name="Structure Chart" color="#ff3300" meeting="false" start="2014-11-06" duration="4" complete="0" expand="true"/>
+            <task id="46" name="System Flowchart" color="#ff3300" meeting="false" start="2014-11-06" duration="6" complete="0" expand="true"/>
+            <task id="48" name="Data Dictionary" color="#ff3300" meeting="false" start="2014-12-04" duration="1" complete="0" expand="true"/>
+            <task id="51" name="Test Data &amp; Expected Output" color="#ff3300" meeting="false" start="2014-12-08" duration="1" complete="0" expand="true"/>
+        </task>
+        <task id="2" name="Design" color="#99ff99" meeting="false" start="2015-02-16" duration="32" complete="0" expand="false">
+            <task id="85" name="Client Communication" color="#8cb6ce" meeting="false" start="2015-02-16" duration="30" complete="0" expand="true"/>
+            <task id="86" name="IPO Chart" color="#8cb6ce" meeting="false" start="2015-02-18" duration="10" complete="0" expand="true"/>
+            <task id="87" name="DFD" color="#8cb6ce" meeting="false" start="2015-03-02" duration="9" complete="0" expand="true"/>
+            <task id="88" name="Structure Chart" color="#8cb6ce" meeting="false" start="2015-03-09" duration="10" complete="0" expand="true"/>
+            <task id="89" name="System Flowcharts" color="#8cb6ce" meeting="false" start="2015-03-16" duration="10" complete="0" expand="true"/>
+            <task id="90" name="Data Dictionaries" color="#8cb6ce" meeting="false" start="2015-03-18" duration="10" complete="0" expand="true"/>
+            <task id="91" name="Prototype Screenshots" color="#8cb6ce" meeting="false" start="2015-03-19" duration="6" complete="0" expand="true"/>
+            <task id="92" name="Algorithms" color="#8cb6ce" meeting="false" start="2015-03-03" duration="15" complete="0" expand="true"/>
+            <task id="93" name="Specifications and External Modules" color="#8cb6ce" meeting="false" start="2015-03-11" duration="4" complete="0" expand="true"/>
+            <task id="94" name="File and Record Defintions" color="#8cb6ce" meeting="false" start="2015-03-16" duration="2" complete="0" expand="true"/>
+            <task id="95" name="Test Data" color="#8cb6ce" meeting="false" start="2015-03-02" duration="6" complete="0" expand="true"/>
+            <task id="96" name="Website Screenshots" color="#8cb6ce" meeting="false" start="2015-03-24" duration="1" complete="0" expand="true"/>
+            <task id="97" name="Reflection" color="#8cb6ce" meeting="false" start="2015-03-27" duration="1" complete="0" expand="true"/>
+        </task>
+        <task id="53" name="Software" color="#99ff99" meeting="false" start="2014-12-11" duration="123" complete="0" expand="true"/>
+        <task id="57" name="Hardware" color="#99ff99" meeting="false" start="2015-01-15" duration="98" complete="0" expand="true"/>
+        <task id="4" name="Implementation" color="#3333ff" meeting="false" start="2015-04-10" duration="66" complete="0" expand="true"/>
+        <task id="61" name="Testing" color="#3333ff" meeting="false" start="2015-04-15" duration="50" complete="0" expand="true"/>
+        <task id="64" name="Finalisation" color="#3333ff" meeting="false" start="2015-06-15" duration="20" complete="0" expand="true"/>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <taskdisplaycolumns>
+        <displaycolumn property-id="tpd2" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd7" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd8" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd6" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd10" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd11" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd9" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd1" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd0" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd3" order="0" width="199" visible="true"/>
+        <displaycolumn property-id="tpd4" order="1" width="75" visible="true"/>
+        <displaycolumn property-id="tpd5" order="2" width="74" visible="true"/>
+    </taskdisplaycolumns>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>

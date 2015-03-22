@@ -1,0 +1,65 @@
+Algorithms
+
+Authenticate:
+------------
+
+BEGIN Authenticate
+	OPEN NFC/RFID Card
+	GET Card_Data
+    User_ID = Card_Data[0]
+    OPEN Local DB
+    Auth = Search Local DB for User_ID
+    If Auth != Null:
+        Save Stack.append(User_ID) to Local DB
+        Return True
+    Else:
+        Return False
+END Authenticate
+
+
+Exit:
+-----
+
+BEGIN Exit
+    CLOSE Window
+END Exit
+
+
+Shutdown:
+--------
+
+BEGIN Shutdown
+    CLOSE Window
+    Stop
+END Shutdown
+    
+
+Get Raw Student Data:
+--------------------
+
+BEGIN Get_Raw_Data
+    OPEN Local DB
+    GET Stack from Local DB
+    Return Stack
+END Get_Raw_Data
+
+Trouble Shooting:
+----------------
+
+BEGIN TroubleShooting
+    DISPLAY TroubleShoot.png
+END TroubleSHooting
+
+
+Check Calendar:
+---------------
+
+BEGIN CheckCalendar(User_ID)
+    OPEN Edumate DB #Opened Via HTTP
+    RawData = Search Edumate DB for User_ID
+    Return RawData #In the format [[Teacher, Subject, Class]]
+END CheckCalendar
+    
+    
+
+
