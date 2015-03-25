@@ -1,6 +1,7 @@
 import Tkinter as tk
 import thread
 import commands
+from PIL import Image, ImageTk
 TITLE_FONT = ("Helvetica", 18, "bold")
 # Tkinter initialisation class
 class SampleApp(tk.Tk):
@@ -12,7 +13,7 @@ class SampleApp(tk.Tk):
         container.grid_rowconfigure(0, weight=1)
         container.grid_columnconfigure(0, weight=1)
         self.frames = {}
-        for F in (Login, Logged_In, Not_Logged_In, Calendar):
+        for F in (Login, Logged_In, Not_Logged_In, ALogged_In, Calendar, TroubleShooting, Raw_Data):
             frame = F(container, self)
             self.frames[F] = frame
             # put all of the pages in the same location; 
@@ -52,6 +53,60 @@ class Not_Logged_In(tk.Frame):
         label.pack(side="top", fill="x", pady=10)
         button = tk.Button(self, text="Go to the start page", command=lambda: controller.show_frame(Login))
         button.pack()
+class ALogged_In(tk.Frame):
+    def __init__(self, parent, controller):
+        tk.Frame.__init__(self, parent) 
+        label = tk.Label(self, text="You're Logged in!", font=TITLE_FONT)
+        label.pack(side="top", fill="x", pady=10)
+        x = Misc()
+        button1 = tk.Button(self, text="Check Your Calendar", command=lambda: controller.show_frame(Calendar))
+        button2 = tk.Button(self, text="Acces Raw Student Data", command=lambda: controller.show_frame(Raw_Data))
+        button3 = tk.Button(self, text="Trouble Shooting", command=lambda:controller.show_frame(TroubleShooting))
+        button4 = tk.Button(self, text="Shutdown")
+        button5 = tk.Button(self, text="Exit")
+        button5.pack()
+        button4.pack()
+        button3.pack()
+        button2.pack()
+        button1.pack()
+        
+class TroubleShooting(tk.Frame):
+    def __init__(self, parent, controller):
+        tk.Frame.__init__(self, parent)
+        image = Image.open("TS.png")
+        photo = ImageTk.PhotoImage(image)
+        label = tk.Label(self, image=photo)
+        label.image = photo
+        label.pack(side="top", fill="x", pady=10)
+        button = tk.Button(self, text="Go Back", command=lambda: controller.show_frame(Logged_In))
+        button.pack()
+class Raw_Data(tk.Frame):
+    def __init__(self, parent, controller):
+        tk.Frame.__init__(self, parent)
+        label = tk.Label(self, text="Raw Data", font=TITLE_FONT)
+        label.grid(row=0, column=1)
+        data = [["Number of Logins", "4"], ["Users", "Nathan Cohen"]]
+        # use black background so it "peeks through" to 
+        # form grid lines
+        rows  = 2
+        columns = 2
+        self._widgets = []
+        
+        for row in range(2):
+            current_row = []
+            for column in range(2):
+                label = tk.Label(self, text="%s" % (data[row][column]), 
+                                 borderwidth=0, width=10)
+                label.grid(row=row, column=column, sticky="nsew", padx=1, pady=1)
+                current_row.append(label)
+            self._widgets.append(current_row)
+        for column in range(columns):
+            self.grid_columnconfigure(column, weight=1)
+        button = tk.Button(self, text="Go Back", command=lambda: controller.show_frame(ALogged_In))
+        button.grid(row=9, column=0)
+
+    
+    
 class Calendar(tk.Frame):
     def __init__(self, parent, controller):
         # use black background so it "peeks through" to 
@@ -81,9 +136,12 @@ class Misc():
         poll = commands.getstatusoutput('python ./Local_Login.py')
         out = poll[1]
         if out == "Hello World":
-            a.show_frame(Logged_In)
+            a.show_frame(ALogged_In)
         else:
             a.show_frame(Not_Logged_In)
+    def rawData(self):
+        data = commands.getstatusoutput('python ./Local_Login.py')
+        return data
     def query_ed(self, typ):
         edumateReply = commands.getstatusoutput('python ./Edumate.py')
         out = []

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="Untitled Gantt Project" company="" webLink="http://" view-date="2014-09-01" view-index="0" gantt-divider-location="354" resource-divider-location="300" version="2.0" locale="en_US">
+<project name="Untitled Gantt Project" company="" webLink="http://" view-date="2015-02-15" view-index="0" gantt-divider-location="354" resource-divider-location="300" version="2.0" locale="en_US">
     <description/>
-    <view zooming-state="default:9" id="gantt-chart">
+    <view zooming-state="default:5" id="gantt-chart">
         <field id="tpd3" name="Name" width="57" order="0"/>
         <field id="tpd4" name="Begin date" width="21" order="1"/>
         <field id="tpd5" name="End date" width="21" order="2"/>
@@ -36,7 +36,7 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="0" name="Defining and Understanding" color="#ff3333" meeting="false" start="2014-11-06" duration="23" complete="0" expand="false">
+        <task id="0" name="Defining and Understanding" color="#ff3333" meeting="false" start="2014-11-06" duration="23" complete="0" expand="true">
             <task id="6" name="Identifying the Problem" color="#ff3333" meeting="false" start="2014-11-14" duration="5" complete="0" expand="true"/>
             <task id="15" name="Development Approach" color="#ff3333" meeting="false" start="2014-12-04" duration="1" complete="0" expand="true"/>
             <task id="18" name="Social and Ethical" color="#ff3333" meeting="false" start="2014-12-08" duration="1" complete="0" expand="true"/>
@@ -52,7 +52,7 @@
             <task id="48" name="Data Dictionary" color="#ff3300" meeting="false" start="2014-12-04" duration="1" complete="0" expand="true"/>
             <task id="51" name="Test Data &amp; Expected Output" color="#ff3300" meeting="false" start="2014-12-08" duration="1" complete="0" expand="true"/>
         </task>
-        <task id="2" name="Design" color="#99ff99" meeting="false" start="2015-02-16" duration="32" complete="0" expand="false">
+        <task id="2" name="Design" color="#99ff99" meeting="false" start="2015-02-16" duration="32" complete="0" expand="true">
             <task id="85" name="Client Communication" color="#8cb6ce" meeting="false" start="2015-02-16" duration="30" complete="0" expand="true"/>
             <task id="86" name="IPO Chart" color="#8cb6ce" meeting="false" start="2015-02-18" duration="10" complete="0" expand="true"/>
             <task id="87" name="DFD" color="#8cb6ce" meeting="false" start="2015-03-02" duration="9" complete="0" expand="true"/>
